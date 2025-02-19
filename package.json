@@ -1,5 +1,5 @@
 {
-  "name": "scribble",
+  "name": "paintsync",
   "version": "1.0.0",
   "description": "A drawing app which allows multiple users to draw on the same canvas in real-time.",
   "main": "index.js",
