@@ -163,11 +163,7 @@ io.on('connection', socket => {
   })
 })
 
-const PORT = process.env.PORT || 3001
-
-server.listen(PORT, () => console.log(`Server is running on port ${PORT} now!`))
-
-// Add this near your other Express route definitions
+// Move this BEFORE server.listen
 app.get('/', (req, res) => {
   res.json({
     status: 'online',
@@ -175,3 +171,12 @@ app.get('/', (req, res) => {
     version: '1.0.0'
   });
 });
+
+// Add this with your other routes
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
+const PORT = process.env.PORT || 3001
+
+server.listen(PORT, () => console.log(`Server is running on port ${PORT} now!`));
