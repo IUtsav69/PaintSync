@@ -166,3 +166,12 @@ io.on('connection', socket => {
 const PORT = process.env.PORT || 3001
 
 server.listen(PORT, () => console.log(`Server is running on port ${PORT} now!`))
+
+// Add this near your other Express route definitions
+app.get('/', (req, res) => {
+  res.json({
+    status: 'online',
+    message: 'PaintSync server is running',
+    version: '1.0.0'
+  });
+});
