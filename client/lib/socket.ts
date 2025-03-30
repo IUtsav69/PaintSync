@@ -1,6 +1,8 @@
 import { io } from 'socket.io-client'
 
-const socket = io(process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:3001', {
+const socket = io('https://paintsync-backend69.onrender.com', {
   transports: ['websocket'],
   autoConnect: false,
 });
+
+export default socket;
