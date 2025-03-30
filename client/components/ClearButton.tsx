@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { useParams } from 'next/navigation'
 import { useHotkeys } from 'react-hotkeys-hook'
 
-import { socket } from '@/lib/socket'
+import socket from "@/lib/socket"
 import { Button } from '@/components/ui/Button'
 import {
   Tooltip,

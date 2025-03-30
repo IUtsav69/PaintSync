@@ -11,7 +11,7 @@ import { toast } from 'sonner'
 import type { RoomJoinedData } from '@/types'
 import { useUserStore } from '@/stores/userStore'
 import { useMembersStore } from '@/stores/membersStore'
-import { socket } from '@/lib/socket'
+import { socket } from "@/lib/socket"
 import { createRoomSchema } from '@/lib/validations/createRoom'
 import { Button } from '@/components/ui/Button'
 import {
